@@ -3,10 +3,15 @@
   <ion-page>
     <ion-content>
       <!-- Products -->
-      <ion-grid>
+      <ion-grid class="ion-padding">
         <ion-row>
           <ion-col v-for="product in products" :key="product.id">
             <ion-img :src="product.thumbnail"></ion-img>
+            <ion-fab vertical="top" horizontal="end" edge>
+              <ion-fab-button size="small" color="medium">
+                <ion-icon name="add" color="dark"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -22,8 +27,15 @@ import {
   IonRow,
   IonCol,
   IonImg,
+  IonFab,
+  IonFabButton,
+  IonIcon,
 } from "@ionic/vue";
 
+import { add } from "ionicons/icons";
+import { addIcons } from "ionicons";
+
+addIcons({ add });
 export default {
   components: {
     IonPage,
@@ -32,6 +44,9 @@ export default {
     IonRow,
     IonCol,
     IonImg,
+    IonFab,
+    IonFabButton,
+    IonIcon,
   },
   data() {
     return {
