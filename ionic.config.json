@@ -1,0 +1,7 @@
+{
+  "name": "ionic-vue-shopping-cart",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
