@@ -22,6 +22,14 @@
         </ion-col>
 
         <!-- Quantity Selector (also updating product price) -->
+        <ion-col size="1">
+          <ion-input
+            type="number"
+            :value="item.quantity"
+            min="1"
+          >
+          </ion-input>
+        </ion-col>
 
         <!-- Remove Button -->
       </ion-row>
@@ -36,6 +44,7 @@ import {
   IonRow,
   IonCol,
   IonImg,
+  IonInput,
 } from "@ionic/vue";
 
 export default {
@@ -46,6 +55,7 @@ export default {
     IonRow,
     IonCol,
     IonImg,
+    IonInput,
   },
 };
 </script>
