@@ -12,7 +12,7 @@ ionic serve
 ## Goals:
 
 - [ ] 1. Shopping cart icon with total number of items and amount in the cart (changes in detail view should be reflected as well)
-- [ ] 2. Detail View:
+- [x] 2. Detail View:
 - - [x] Thumbnail product image
 - - [x] Title and subtitle
 - - [x] Product price(multiplied by quantity)

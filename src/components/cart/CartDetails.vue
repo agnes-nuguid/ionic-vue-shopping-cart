@@ -2,6 +2,7 @@
   <ion-card>
     <ion-grid>
       <ion-row
+        class="ion-justify-content-around ion-align-items-center"
         v-for="item in cart"
         :key="item.id"
       >
