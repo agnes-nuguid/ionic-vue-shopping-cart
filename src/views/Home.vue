@@ -3,7 +3,7 @@
   <ion-page>
     <ion-content>
       <!-- Cart -->
-      <cart-overview></cart-overview>
+      <cart-overview :cart="cart"></cart-overview>
 
       <!-- Details View -->
       <cart-details
