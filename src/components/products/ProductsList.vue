@@ -8,6 +8,7 @@
           <ion-fab-button
             size="small"
             color="medium"
+            @click="addToCart(product)"
           >
             <ion-icon :icon="add" color="dark"></ion-icon>
           </ion-fab-button>
@@ -40,6 +41,11 @@ export default {
     IonFab,
     IonFabButton,
     IonIcon,
+  },
+  methods: {
+    addToCart: function(product) {
+      this.$emit("add-to-cart", product);
+    },
   },
   setup() {
     return {

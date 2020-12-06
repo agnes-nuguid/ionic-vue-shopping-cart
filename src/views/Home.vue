@@ -9,6 +9,7 @@
       <!-- Products -->
       <products-list
         :products="products"
+        @add-to-cart="handleAddToCart"
       ></products-list>
     </ion-content>
   </ion-page>
@@ -27,6 +28,7 @@ export default {
   },
   data() {
     return {
+      cart: [],
       products: [
         {
           id: "1",
@@ -60,5 +62,16 @@ export default {
     };
   },
 
+  methods: {
+    handleAddToCart: function(product) {
+      if (this.cart.filter((item) => item.id === product.id).length) {
+        this.cart
+          .filter((item) => item.id === product.id)
+          .map((item) => (item.quantity += 1));
+      } else {
+        this.cart.push({ ...product, quantity: 1 });
+      }
+    },
+  },
 };
 </script>
