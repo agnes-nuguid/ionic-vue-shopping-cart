@@ -11,6 +11,8 @@
         {{ totalItems }}
       </ion-badge>
 
+      <!-- Total Amount -->
+      <div id="cart-amount">$ {{ totalAmount }}</div>
   </div>
   </div>
 </template>
@@ -28,6 +30,18 @@ export default {
   computed: {
     totalItems: function() {
       return this.cart.reduce((total, item) => total + item.quantity, 0);
+  },
+    totalAmount: function() {
+      // Parses to float for the quantity(int) and for the decimal places
+      return this.cart
+        .reduce(
+          (total, item) =>
+            parseFloat(total) +
+            parseFloat(item.quantity) * parseFloat(item.price),
+          parseFloat(0)
+        )
+        .toFixed(2);
+    },
   },
   setup() {
     return {
