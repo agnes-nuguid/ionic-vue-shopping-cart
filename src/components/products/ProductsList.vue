@@ -1,8 +1,13 @@
 <template>
   <!-- Products -->
   <ion-grid class="ion-margin">
-    <ion-row>
-      <ion-col v-for="product in products" :key="product.id">
+    <ion-row class="ion-justify-content-center">
+      <ion-col
+        size-sm="2"
+        size="6"
+        v-for="product in products"
+        :key="product.id"
+      >
         <ion-img :src="product.thumbnail" alt="Placeholder image"></ion-img>
         <ion-fab vertical="top" horizontal="end" edge>
           <ion-fab-button

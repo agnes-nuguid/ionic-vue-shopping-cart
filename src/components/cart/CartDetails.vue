@@ -7,23 +7,23 @@
         :key="item.id"
       >
         <!-- Thumbnail -->
-        <ion-col size="2">
+        <ion-col size-xs="6" size-sm="2">
           <ion-img :src="item.thumbnail"></ion-img>
         </ion-col>
 
         <!-- Title & Subtitle -->
-        <ion-col size="4">
+        <ion-col size-xs="12" size-sm="4">
           <h3>{{ item.title }}</h3>
           <p>{{ item.subtitle }}</p>
         </ion-col>
 
         <!-- Product Price (multiplied by quantity) -->
-        <ion-col size="2">
+        <ion-col size-sm="2">
           $ {{ parseFloat(item.price * item.quantity).toFixed(2) }}
         </ion-col>
 
         <!-- Quantity Selector (also updating product price) -->
-        <ion-col size="1">
+        <ion-col size-sm="1">
           <ion-input
             type="number"
             :value="item.quantity"
@@ -34,7 +34,7 @@
         </ion-col>
 
         <!-- Remove Button -->
-        <ion-col size="1">
+        <ion-col size-sm="1">
           <ion-button
             fill="clear"
             color="dark"
@@ -86,3 +86,9 @@ export default {
   },
 };
 </script>
+
+<style>
+ion-col {
+  color: var(--ion-color-dark);
+}
+</style>
