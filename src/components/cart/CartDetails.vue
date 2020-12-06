@@ -33,6 +33,14 @@
         </ion-col>
 
         <!-- Remove Button -->
+        <ion-col size="1">
+          <ion-button
+            fill="clear"
+            color="dark"
+          >
+            <ion-icon :icon="trashOutline"></ion-icon>
+          </ion-button>
+        </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>
@@ -46,7 +54,11 @@ import {
   IonCol,
   IonImg,
   IonInput,
+  IonButton,
+  IonIcon,
 } from "@ionic/vue";
+
+import { trashOutline } from "ionicons/icons";
 
 export default {
   props: ["cart"],
@@ -57,6 +69,13 @@ export default {
     IonCol,
     IonImg,
     IonInput,
+    IonButton,
+    IonIcon,
+  },
+  setup() {
+    return {
+      trashOutline,
+    };
   },
 };
 </script>
