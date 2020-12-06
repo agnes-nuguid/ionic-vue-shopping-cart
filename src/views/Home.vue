@@ -3,6 +3,7 @@
   <ion-page>
     <ion-content>
       <!-- Cart -->
+      <cart-overview></cart-overview>
 
       <!-- Details View -->
       <cart-details
@@ -22,6 +23,8 @@
 <script>
 import { IonPage, IonContent } from "@ionic/vue";
 
+import CartOverview from "../components/cart/CartOverview.vue";
+
 import CartDetails from "../components/cart/CartDetails.vue";
 
 import ProductsList from "../components/products/ProductsList.vue";
@@ -30,6 +33,7 @@ export default {
   components: {
     IonPage,
     IonContent,
+    CartOverview,
     CartDetails,
     ProductsList,
   },
