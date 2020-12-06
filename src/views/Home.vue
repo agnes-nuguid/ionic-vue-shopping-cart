@@ -5,6 +5,10 @@
       <!-- Cart -->
 
       <!-- Details View -->
+      <cart-details
+        v-if="cart.length"
+        :cart="cart"
+      ></cart-details>
 
       <!-- Products -->
       <products-list
@@ -18,12 +22,15 @@
 <script>
 import { IonPage, IonContent } from "@ionic/vue";
 
+import CartDetails from "../components/cart/CartDetails.vue";
+
 import ProductsList from "../components/products/ProductsList.vue";
 
 export default {
   components: {
     IonPage,
     IonContent,
+    CartDetails,
     ProductsList,
   },
   data() {
