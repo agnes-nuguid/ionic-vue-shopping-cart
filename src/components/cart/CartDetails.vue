@@ -17,6 +17,9 @@
         </ion-col>
 
         <!-- Product Price (multiplied by quantity) -->
+        <ion-col size="2">
+          $ {{ parseFloat(item.price * item.quantity).toFixed(2) }}
+        </ion-col>
 
         <!-- Quantity Selector (also updating product price) -->
 

@@ -15,7 +15,7 @@ ionic serve
 - [ ] 2. Detail View:
 - - [x] Thumbnail product image
 - - [x] Title and subtitle
-- - [ ] Product price(multiplied by quantity)
+- - [x] Product price(multiplied by quantity)
 - - [ ] Quantity selector (also updating product price)
 - - [ ] Remove button
 - [ ] 3. Ability to drag product image to the cart after which gets added to the cart
