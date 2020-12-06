@@ -38,6 +38,7 @@
           <ion-button
             fill="clear"
             color="dark"
+            @click="removeFromCart(item.id)"
           >
             <ion-icon :icon="trashOutline"></ion-icon>
           </ion-button>
@@ -72,6 +73,11 @@ export default {
     IonInput,
     IonButton,
     IonIcon,
+  },
+  methods: {
+    removeFromCart: function(product) {
+      this.$emit("remove-from-cart", product);
+    },
   },
   setup() {
     return {

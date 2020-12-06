@@ -9,6 +9,7 @@
       <cart-details
         v-if="cart.length"
         :cart="cart"
+        @remove-from-cart="handleRemoveFromCart"
       ></cart-details>
 
       <!-- Products -->
@@ -82,6 +83,9 @@ export default {
       } else {
         this.cart.push({ ...product, quantity: 1 });
       }
+    },
+    handleRemoveFromCart: function(itemId) {
+      this.cart = this.cart.filter((item) => item.id !== itemId);
     },
   },
 };
