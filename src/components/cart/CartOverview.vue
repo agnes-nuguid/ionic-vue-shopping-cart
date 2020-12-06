@@ -13,7 +13,7 @@
 
       <!-- Total Amount -->
       <div id="cart-amount">$ {{ totalAmount }}</div>
-  </div>
+    </div>
   </div>
 </template>
 <script>
@@ -30,7 +30,7 @@ export default {
   computed: {
     totalItems: function() {
       return this.cart.reduce((total, item) => total + item.quantity, 0);
-  },
+    },
     totalAmount: function() {
       // Parses to float for the quantity(int) and for the decimal places
       return this.cart
@@ -52,6 +52,10 @@ export default {
 </script>
 
 <style>
+#cart {
+  display: flex;
+  justify-content: flex-end;
+}
 
 #cart ion-icon {
   font-size: 64px;
