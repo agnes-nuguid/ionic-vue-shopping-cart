@@ -6,6 +6,9 @@
         :key="item.id"
       >
         <!-- Thumbnail -->
+        <ion-col size="2">
+          <ion-img :src="item.thumbnail"></ion-img>
+        </ion-col>
 
         <!-- Title & Subtitle -->
 
@@ -24,6 +27,8 @@ import {
   IonCard,
   IonGrid,
   IonRow,
+  IonCol,
+  IonImg,
 } from "@ionic/vue";
 
 export default {
@@ -32,6 +37,8 @@ export default {
     IonCard,
     IonGrid,
     IonRow,
+    IonCol,
+    IonImg,
   },
 };
 </script>
