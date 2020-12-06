@@ -14,7 +14,7 @@ ionic serve
 - [ ] 1. Shopping cart icon with total number of items and amount in the cart (changes in detail view should be reflected as well)
 - [ ] 2. Detail View:
 - - [x] Thumbnail product image
-- - [ ] Title and subtitle
+- - [x] Title and subtitle
 - - [ ] Product price(multiplied by quantity)
 - - [ ] Quantity selector (also updating product price)
 - - [ ] Remove button

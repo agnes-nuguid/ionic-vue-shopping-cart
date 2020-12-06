@@ -11,6 +11,10 @@
         </ion-col>
 
         <!-- Title & Subtitle -->
+        <ion-col size="4">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.subtitle }}</p>
+        </ion-col>
 
         <!-- Product Price (multiplied by quantity) -->
 
