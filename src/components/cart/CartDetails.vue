@@ -27,6 +27,7 @@
             type="number"
             :value="item.quantity"
             min="1"
+            @input="item.quantity = parseInt($event.target.value)"
           >
           </ion-input>
         </ion-col>

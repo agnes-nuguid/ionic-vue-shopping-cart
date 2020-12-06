@@ -16,7 +16,6 @@ ionic serve
 - - [x] Thumbnail product image
 - - [x] Title and subtitle
 - - [x] Product price(multiplied by quantity)
-- - [ ] Quantity selector (also updating product price)
-- - [ ] Remove button
+- - [x] Quantity selector (also updating product price)
 - [ ] 3. Ability to drag product image to the cart after which gets added to the cart
 - [x] 4. Ability to add product to the cart using '+' button next to product image
