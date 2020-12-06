@@ -31,6 +31,7 @@ import {
 import { add } from "ionicons/icons";
 
 export default {
+  props: ["products"],
   components: {
     IonGrid,
     IonRow,
