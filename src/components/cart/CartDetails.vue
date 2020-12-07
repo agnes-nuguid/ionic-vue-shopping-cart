@@ -1,5 +1,5 @@
 <template>
-  <ion-card>
+  <ion-card class="ion-margin">
     <ion-grid>
       <ion-row
         class="ion-justify-content-around ion-align-items-center"
@@ -7,7 +7,7 @@
         :key="item.id"
       >
         <!-- Thumbnail -->
-        <ion-col size-xs="6" size-sm="2">
+        <ion-col size-xs="6" size-sm="2" size-xl="1">
           <ion-img :src="item.thumbnail"></ion-img>
         </ion-col>
 
