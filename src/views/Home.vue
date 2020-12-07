@@ -3,13 +3,21 @@
   <ion-page>
     <ion-content>
       <!-- Cart -->
-      <cart-overview :cart="cart"></cart-overview>
+      <cart-overview
+        :cart="cart"
+        @drop="onDrop($event)"
+        @dragover.prevent
+        @dragenter.prevent
+      ></cart-overview>
 
       <!-- Details View -->
       <cart-details
         v-if="cart.length"
         :cart="cart"
         @remove-from-cart="handleRemoveFromCart"
+        @drop="onDrop($event)"
+        @dragover.prevent
+        @dragenter.prevent
       ></cart-details>
 
       <!-- Products -->
@@ -73,7 +81,6 @@ export default {
       ],
     };
   },
-
   methods: {
     handleAddToCart: function(product) {
       if (this.cart.filter((item) => item.id === product.id).length) {
@@ -86,6 +93,12 @@ export default {
     },
     handleRemoveFromCart: function(itemId) {
       this.cart = this.cart.filter((item) => item.id !== itemId);
+    },
+    onDrop: function(event) {
+      event.preventDefault(); // Prevents redirection to image
+      const productId = event.dataTransfer.getData("productId");
+      const product = this.products.find((product) => product.id === productId);
+      this.handleAddToCart(product);
     },
   },
 };

@@ -7,6 +7,7 @@
         size="6"
         v-for="product in products"
         :key="product.id"
+        @dragstart="startDrag($event, product)"
       >
         <ion-img :src="product.thumbnail" alt="Placeholder image"></ion-img>
         <ion-fab vertical="top" horizontal="end" edge>
@@ -50,6 +51,9 @@ export default {
   methods: {
     addToCart: function(product) {
       this.$emit("add-to-cart", product);
+    },
+    startDrag: (evt, item) => {
+      evt.dataTransfer.setData("productId", item.id);
     },
   },
   setup() {
